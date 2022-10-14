@@ -6,30 +6,46 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Utils {
 
-    public static List<Person> listarTodasPersonas() throws IOException {
-        Path path = Paths.get("block1-process-file-and-streams/src/main/resources/people.csv");
-        List<String> entireFile = Files.readAllLines(path);
+    public static List<Person> listarTodasPersonas(String path) throws IOException {
+        List<String> entireFile = Files.readAllLines(Paths.get(path));
+        List<Person> listaDePersonas = new ArrayList<>();
+        int numeroFila = 0;
         for (String linea : entireFile){
-            System.out.println(linea);
+            List<String> columnas = List.of(linea.split(":"));
+            String name = columnas.get(0);
+            String town = columnas.get(1);
+            if (town.isEmpty()){
+                town = "unknown";
+            }
+            Integer edad = null;
+            try {
+                edad = Integer.valueOf(columnas.get(2));
+            } catch (IndexOutOfBoundsException e){
+
+            }
+            Person persona = new Person();
+            persona.setName(name);
+            persona.setTown(town);
+            persona.setEdad(edad);
+            listaDePersonas.add(persona);
         }
-        return new ArrayList<Person>();
+        return listaDePersonas;
     }
 
-    public static void listarConStream() throws IOException {
-        String fichero = "block1-process-file-and-streams/src/main/resources/people.csv";
-
-        try (Stream<String> stream = Files.lines(Paths.get(fichero))){
-            stream.map(linea -> linea.split(":"))
-                    .map(Person::buildFromArray)
-                    .mapToInt(o ->o.getEdad())
-                    .onClose(() -> System.out.println("termino"));
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static List<Person> listarConFiltroStream(String path) throws IOException {
+        List<Person> listaPersonas =  listarTodasPersonas(path);
+        System.out.println("LISTA CON FILTRO: ");
+        Predicate <Person> predicade1 = (Person p) -> p.getEdad() < 25;
+        List<Person> listaFiltrada = listaPersonas.stream()
+                .filter(predicade1)
+                .collect(Collectors.toList());;
+        return listaFiltrada;
     }
 }

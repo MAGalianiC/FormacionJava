@@ -2,15 +2,23 @@ package com.example.block1processfileandstreams;
 
 import lombok.Data;
 
+import java.util.random.RandomGenerator;
+
 @Data public class Person {
     private String name;
     private String town;
-    private int edad = 0;
+    private Integer edad;
 
-    public Person(String elemento, String elemento1, int parseInt) {
+    public Person() {
+        this.edad=0;
     }
 
-    public static Person buildFromArray(String[] elementos){
-        return new Person(elementos[0], elementos[1], Integer.parseInt(elementos[2]));
+    @Override
+    public String toString(){
+        String edadString = "Unknown";
+        if (edad != null && edad != 0){
+            edadString = edad.toString();
+        }
+        return "Name: " + name + ". Town: " + town + ". Age: " + edadString;
     }
 }

@@ -11,13 +11,13 @@ public class Block1ProcessFileAndStreamsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Block1ProcessFileAndStreamsApplication.class, args);
 		String path = "block1-process-file-and-streams/src/main/resources/people.csv";
-		try {
-			Utils.listarTodasPersonas();
+		/*try {
+			Utils.listarTodasPersonas(path).forEach(System.out::println);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
-		}
+		}*/
 		try {
-			Utils.listarConStream();
+			Utils.listarConFiltroStream(path).forEach(System.out::println);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
