@@ -2,6 +2,7 @@ package com.example.block1processfileandstreams;
 
 import lombok.Data;
 
+import java.util.Optional;
 import java.util.random.RandomGenerator;
 
 @Data public class Person {
@@ -11,6 +12,14 @@ import java.util.random.RandomGenerator;
 
     public Person() {
         this.edad=0;
+    }
+
+    public Optional<String> getTown(){
+        return Optional.ofNullable(town);
+    }
+
+    public Optional<Integer> getEdad(){
+        return Optional.ofNullable(edad);
     }
 
     @Override
