@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\block1-expression-evaluator\src\main\resources\Fichero.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\block1-process-file-and-streams\src\main\resources\people.csv">
           <value>
             <Attribute>
