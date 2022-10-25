@@ -35,7 +35,7 @@ public class Block1ProcessFileAndStreamsApplication {
 			Utils.listarConFiltroStream(path, predicate2).forEach(System.out::println);
 			System.out.println("Ejercicio C:");
 			//Listo la primera persona de la lista cuya ciudad sea "Madrid" y que cumplen las condiciones del apartado A.
-			personaFiltrada = Utils.filtradoUnElemento(path, filtradoA, predicate3).stream().findFirst();
+			personaFiltrada = Utils.filtradoUnElemento(path, filtradoA, predicate3);
 			//Hago un if para poder devolver que no hay ningún elemento en la lista que cumpla los requisitos que se pieden en el apartado.
 			if (personaFiltrada.isPresent()){
 				System.out.println(personaFiltrada.get());
@@ -44,7 +44,7 @@ public class Block1ProcessFileAndStreamsApplication {
 			}
 			System.out.println("Ejercicio D:");
 			//Listo la primera persona de la lista cuya ciudad sea "Barcelona" y que cumplen las condiciones del apartado A.
-			personaFiltrada = Utils.filtradoUnElemento(path, filtradoA, predicate4).stream().findFirst();
+			personaFiltrada = Utils.filtradoUnElemento(path, filtradoA, predicate4);
 			//Hago un if para poder devolver que no hay ningún elemento en la lista que cumpla los requisitos que se pieden en el apartado.
 			if (personaFiltrada.isPresent()){
 				System.out.println(personaFiltrada.get());

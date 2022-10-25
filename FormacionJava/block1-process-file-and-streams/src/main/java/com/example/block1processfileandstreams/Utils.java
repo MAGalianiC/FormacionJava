@@ -14,7 +14,7 @@ public class Utils {
     //Al método se le pasa un String con el path del archivo del cual queremos extraer la lista de Personas
     //El método devuelve una lista de personas que cumplen los requisitos
     public static List<Person> listarTodasPersonas(String path) throws IOException{
-        //Guardo en una lista de Strings el contenido del fichero CSV separando cada String por cada línea distinta en el fichero (Por cada Enter).
+        //Guardo en una lista de Strings el contenido completo del fichero CSV
         List<String> entireFile = Files.readAllLines(Paths.get(path));
         //Creo una lista de Personas para usarla en los diferentes métodos.
         List<Person> listaDePersonas = new ArrayList<>();
