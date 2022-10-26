@@ -8,7 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="block1-expression-evaluator" />
-        <module name="demo" />
+        <module name="block3-maven-package" />
         <module name="block1-process-file-and-streams" />
       </profile>
     </annotationProcessing>
@@ -17,7 +17,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="block1-expression-evaluator" options="-parameters" />
       <module name="block1-process-file-and-streams" options="-parameters" />
-      <module name="demo" options="-parameters" />
     </option>
   </component>
 </project>
