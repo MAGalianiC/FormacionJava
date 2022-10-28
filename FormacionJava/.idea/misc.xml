@@ -7,6 +7,9 @@
         <option value="$PROJECT_DIR$/block1-process-file-and-streams/pom.xml" />
         <option value="$PROJECT_DIR$/block1-expression-evaluator/pom.xml" />
         <option value="$PROJECT_DIR$/block3-maven-package/pom.xml" />
+        <option value="$PROJECT_DIR$/block5-command-line-runner/pom.xml" />
+        <option value="$PROJECT_DIR$/pepe/pom.xml" />
+        <option value="$PROJECT_DIR$/block5-command-line--runner/pom.xml" />
       </list>
     </option>
   </component>
