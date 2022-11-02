@@ -7,7 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="block5-logging" />
         <module name="block1-expression-evaluator" />
+        <module name="block5-profiles" />
         <module name="block5-command-line--runner" />
         <module name="block5-properties" />
         <module name="block3-maven-package" />
@@ -31,6 +33,8 @@
       <module name="block1-expression-evaluator" options="-parameters" />
       <module name="block1-process-file-and-streams" options="-parameters" />
       <module name="block5-command-line--runner" options="-parameters" />
+      <module name="block5-logging" options="-parameters" />
+      <module name="block5-profiles" options="-parameters" />
       <module name="block5-properties" options="-parameters" />
     </option>
   </component>

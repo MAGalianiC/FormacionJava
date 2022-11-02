@@ -1,0 +1,7 @@
+<Console name="info-stdout-message">
+    <PatternLayout pattern="[%logger{36}] %message %n" />
+    <Filters>
+        <!-- Now deny warn, error and fatal messages -->
+        <ThresholdFilter level="warn"  onMatch="DENY"   onMismatch="NEUTRAL"/>
+    </Filters>
+</Console>

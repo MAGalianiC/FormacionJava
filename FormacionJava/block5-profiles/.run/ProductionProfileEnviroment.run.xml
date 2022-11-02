@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ProductionProfileEnviroment" type="Application" factoryName="Application">
+    <envs>
+      <env name="spring.profiles.active" value="pro" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.example.block5profiles.Block5ProfilesApplication" />
+    <module name="demo" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
