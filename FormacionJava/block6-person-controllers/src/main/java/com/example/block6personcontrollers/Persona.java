@@ -1,4 +1,4 @@
-package com.example.block6simplecontrollers;
+package com.example.block6personcontrollers;
 
 import lombok.Data;
 
@@ -6,6 +6,6 @@ import lombok.Data;
 public class Persona {
 
     public String name;
-    public Integer age;
+    public Integer edad;
     public String city;
 }
