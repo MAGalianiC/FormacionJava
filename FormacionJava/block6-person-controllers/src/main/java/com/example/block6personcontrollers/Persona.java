@@ -6,6 +6,12 @@ import lombok.Data;
 public class Persona {
 
     public String name;
-    public Integer edad;
+    public Integer age;
     public String city;
+
+    public Persona(String name, Integer age, String city){
+        this.name =  name;
+        this.age = age;
+        this.city = city;
+    }
 }
