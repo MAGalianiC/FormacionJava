@@ -44,5 +44,4 @@ public class BeanService {
         Persona persona = (Persona) selectedBean.get(this);
         return persona;
     }
-
 }

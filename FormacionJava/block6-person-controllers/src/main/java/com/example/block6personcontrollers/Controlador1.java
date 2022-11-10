@@ -31,7 +31,7 @@ public class Controlador1 {
         cityService.createCity(city);
         return city;
     }
-    //Método que se encarga de recoger el bean que va en el path de la peticion http.
+    //Método que se encarga de recoger el bean que va en el path de la petición http.
     @GetMapping("/controlador/bean/{bean}")
     public Persona getBean(@PathVariable String bean) throws NoSuchFieldException, ClassNotFoundException, IllegalAccessException {
         return beanService.getBean(bean);
