@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="block5-logging" />
+        <module name="block7-crud" />
         <module name="block1-expression-evaluator" />
         <module name="block5-profiles" />
         <module name="block5-command-line--runner" />
@@ -42,6 +43,7 @@
       <module name="block6-path-variable-headers" options="-parameters" />
       <module name="block6-person-controllers" options="-parameters" />
       <module name="block6-simple-controllers" options="-parameters" />
+      <module name="block7-crud" options="-parameters" />
     </option>
   </component>
 </project>
