@@ -22,4 +22,14 @@ public class Persona implements Serializable {
     Integer age;
     @Column
     String population;
+
+    @Override
+    public String toString() {
+        return  "{\n" +
+                "id : " + id + ", " + "\n" +
+                "name : " + name + "," + "\n" +
+                "age : " + age + "," + "\n" +
+                "population : " + population + "\n" +
+                "}\n";
+    }
 }

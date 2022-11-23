@@ -19,7 +19,12 @@ public class PostController {
 
     //Método que se encarga de llamar al método que añade personas a la base de datos que se encuentra en la clase PersonaServiceImpl.
     @PostMapping
-    public Persona addPersona(@RequestBody Persona persona){
-        return personaServiceImpl.addPersona(persona);
+    public String addPersona(@RequestBody Persona persona){
+        if (persona.getName().isEmpty() || persona.getAge() == null || persona.getPopulation().isEmpty()){
+            return "Se deben rellenar todos los campos para agregar una persona";
+        }
+        else {
+            return "Persona guardada: \n\n" + personaServiceImpl.addPersona(persona).toString();
+        }
     }
 }

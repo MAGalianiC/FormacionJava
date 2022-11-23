@@ -22,10 +22,10 @@ public class GetController {
 
     //Método que se encarga de buscar un objeto Persona en la base de datos buscándolo a partir del "id" y devolver un
     //String con el contenido de esa Persona encontrada bien estructurado.
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") //Cambiar exception
     public String getPersonaById(@PathVariable Integer id) throws FileNotFoundException {
         //Creamos un Optional para poder comprobar correctamente que algún campo de Persona pueda estar a null y tratarlo correctamente.
-        Optional<Persona> persona = Optional.ofNullable(personaServiceImpl.findPersonaById(id));
+        Optional<Persona> persona = personaServiceImpl.findPersonaById(id);
         //Si la Persona estuviera vacía, devolveríamos el mensaje de que no se ha encontrado a la Persona
         if (persona.isEmpty() == true){
             return "Persona no encontrada";

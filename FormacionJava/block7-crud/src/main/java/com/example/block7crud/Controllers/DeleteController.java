@@ -19,7 +19,12 @@ public class DeleteController {
     //Método que se encarga de llamar al método "deletePersona" de la clase "PersonaServiceImpl" que se encarga de
     //borrar un objeto de la clase Persona de la Base de Datos.
     @DeleteMapping("/{id}")
-    public void deletePersonaById(@PathVariable Integer id){
-        personaServiceImp.deletePersona(id);
+    public String deletePersonaById(@PathVariable Integer id){
+        try {
+            personaServiceImp.deletePersona(id);
+            return "Persona borrada correctamente.";
+        } catch (Exception exception) {
+            return "El ID seleccionado lo concuerda con ninguna persona.";
+        }
     }
 }

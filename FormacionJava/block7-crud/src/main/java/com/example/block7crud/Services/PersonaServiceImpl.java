@@ -6,8 +6,8 @@ import com.example.block7crud.Pojos.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonaServiceImpl implements PersonaService {
@@ -32,8 +32,8 @@ public class PersonaServiceImpl implements PersonaService {
     }
 
     @Override
-    public Persona findPersonaById(Integer id) throws FileNotFoundException{
-        return personaRepository.findById(id).orElseThrow(() -> new FileNotFoundException("Persona no encontrada"));
+    public Optional<Persona> findPersonaById(Integer id){
+        return personaRepository.findById(id);
     }
 
     @Override

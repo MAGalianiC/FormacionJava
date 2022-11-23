@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="block7-crud-validations" />
         <module name="block5-logging" />
         <module name="block7-crud" />
         <module name="block1-expression-evaluator" />
@@ -29,6 +30,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="block5-command-line-runner" target="17" />
+      <module name="block7-crud-validation" target="17" />
       <module name="demo" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -44,6 +46,8 @@
       <module name="block6-person-controllers" options="-parameters" />
       <module name="block6-simple-controllers" options="-parameters" />
       <module name="block7-crud" options="-parameters" />
+      <module name="block7-crud-validation" options="-parameters" />
+      <module name="block7-crud-validations" options="-parameters" />
     </option>
   </component>
 </project>
